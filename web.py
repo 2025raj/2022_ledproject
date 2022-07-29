@@ -1,3 +1,61 @@
+lblStorage = Label(DataFrameLeft, font=("arial", 12, "bold"),
+                   text="Storage Advice:", padx=2, pady=6)
+lblStorage.grid(row=2, column=2, sticky=W)
+txtStorage = Entry(DataFrameLeft, font=("arial", 12, "bold"), width=35)
+txtStorage.grid(row=2, column=3)
+
+
+lblMedicine = Label(DataFrameLeft, font=(
+    "arial", 12, "bold"), text="Medication", padx=2, pady=6)
+lblMedicine.grid(row=3, column=2, sticky=W)
+txtMedicine = Entry(DataFrameLeft, font=("arial", 12, "bold"), width=35)
+txtMedicine.grid(row=3, column=3, sticky=W)
+
+
+lblPatientId = Label(DataFrameLeft, font=(
+    "arial", 12, "bold"), text="PatientId", padx=2, pady=6)
+lblPatientId.grid(row=4, column=2, sticky=W)
+txtPatientId = Entry(DataFrameLeft, font=("arial", 12, "bold"), width=35)
+txtPatientId.grid(row=4, column=3)
+
+
+lblNhsNumber = Label(DataFrameLeft, font=(
+    "arial", 12, "bold"), text="NHS Number", padx=2, pady=6)
+lblNhsNumber.grid(row=5, column=2, sticky=W)
+txtNhsNumber = Entry(DataFrameLeft, font=("arial", 12, "bold"), width=35)
+txtNhsNumber.grid(row=5, column=3)
+
+
+lblPatientname = Label(DataFrameLeft, font=(
+    "arial", 12, "bold"), text="Patient Name", padx=2, pady=6)
+lblPatientname.grid(row=6, column=2, sticky=W)
+txtPatientname = Entry(DataFrameLeft, font=("arial", 12, "bold"), width=35)
+txtPatientname.grid(row=6, column=3)
+
+
+lblDateOfBirth = Label(DataFrameLeft, font=(
+    "arial", 12, "bold"), text="Date Of Birth", padx=2, pady=6)
+lblDateOfBirth.grid(row=7, column=2, sticky=W)
+txtDateOfBirth = Entry(DataFrameLeft, font=("arial", 12, "bold"), width=35)
+txtDateOfBirth.grid(row=7, column=3)
+
+
+lblPatientAddress = Label(DataFrameLeft, font=(
+    "arial", 12, "bold"), text="Patient Address", padx=2, pady=6)
+lblPatientAddress.grid(row=8, column=2, sticky=W)
+txtPatientAddress = Entry(DataFrameLeft, font=("arial", 12, "bold"), width=35)
+txtPatientAddress.grid(row=8, column=3)
+
+
+#===========================    (DataframeRight)   =======================================#
+
+self.txtPrescription = Text(DataframeRight, font=("arial", 12, "bold"))
+self.txtPrescription.grid(row=0, column=0)
+
+
+#================    ( Buttons)    ===========================================================#
+
+
 btnPrescription = Button(Buttonframe, text="Prescription", bg="green", fg="white", font=(
     "arial", 12, "bold"), width=23, height=16, padx=2, pady=6)
 btnPrescription.grid(row=0, column=0)
@@ -23,9 +81,9 @@ btnExit = Button(Buttonframe, text="Exit", bg="green", fg="white", font=(
 btnExit.grid(row=0, column=5)
 
 
-####################  Table  ##############################
+#==================================== ( Table ) ================================================================#
 
-#############  Scrollbar  ########################
+#==========================================  (  Scrollbar )  ============================================#
 
 scroll_x = ttk.Scrollbar(Detailsframe, orient=HORIZONTAL)
 
@@ -76,7 +134,8 @@ self.hospital_table.column("address", width=100)
 self.hospital_table.pack(fill=BOTH, expand=1)
 self.fatch_data()
 
-# ===============Functionality Declaration ==========
+
+# ===============  (Functionality Declaration) ====================#
 
 
 def iPrescriptionData(self):
